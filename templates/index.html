@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+<div class="container">   
+    <div class="card" style="width:500px">
+        <img class="card-img-top" src="static/images/profile_whiteBackground.png" alt="Card image">
+        <div class="card-body">
+          <h4 class="card-title">Md khaled Iqbal</h4>
+          <p class="card-text">Bachelor of Computer Science</p>
+          <p class="card-text">RMIT University</p>
+          <div class="offcanvas offcanvas-end" id="demo"></div>
+          <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+        <div class="offcanvas offcanvas-end" id="demo1">
+            <div class="offcanvas-header">
+              <h1 class="offcanvas-title">Programming Languages</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+              <p>Java</p>
+              <p>Python</p>
+              <p>R</p>
+              <button class="btn btn-secondary" type="button">A Button</button>
+            </div>
+          </div>
+          
+          <div class="container-fluid mt-3">
+            <h3>Core Competencies At a glance</h3>
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo1">
+              Core Competencies
+            </button>
+          </div>
+      </div>
+</div>
+{% endblock %}
+      
+ 
+   

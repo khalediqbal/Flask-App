@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+ {%block title %}{{title}}{%endblock%}
+{% block content %}
+<div class="container">   
+<h1> Subscribe to my newsletter </h1>
+<br><br>
+{%if error_statement%}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Error!</strong> {{error_statement}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+{%endif%}
+<form action="/form_submit" method="POST">
+    <div class="mb-3">
+      <input type="text" class="form-control" id="text1" placeholder="First Name" name="first_name">
+     </div>
+
+     <div class="mb-3">
+      
+        <input type="text" class="form-control" id="text2" placeholder="Last Name" name="last_name">
+       </div>
+
+
+       <div class="mb-3">
+        
+        <input type="text" class="form-control" id="text3"  placeholder="Email Address" name="email">
+       </div>
+    
+    <br>
+    <button type="submit" class="btn btn-outline-secondary">Submit</button>
+  </form>
+</div>
+{% endblock %}
